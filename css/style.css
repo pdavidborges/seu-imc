@@ -1,0 +1,119 @@
+/*
+seletor{
+    propriedade:valor;    
+}
+*/
+
+body{
+    background-color: #003366;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;    
+}
+
+img{
+    display: block; /*retira o espaçamento inferior das imagens*/
+}
+
+#flex-center{
+    display: flex;
+    align-items: center; /*alinhamento vertical*/
+    justify-content: center; /*alinhamento horizontal*/
+    height: 100vh; /*vh -> unidade de medida baseada na altura do navegador*/    
+}
+
+#principal{
+    width: 1000px; /*largura*/
+    height: 560px; /*altura*/
+    background-color: #ffffff;
+
+    /*Flexbox -> Deve ser aplicado no elemento PAI de quem será formatado*/
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    color: #666666;
+
+    /*margin: 30px auto;*/
+
+}
+
+#conteudo h1{
+    font-size: 36px; 
+    color: #333333;
+    margin-bottom: 0;
+}
+
+#conteudo h1 span{
+    text-decoration: underline; /*add sublinhado*/
+}
+
+#conteudo p{
+    margin-top: 0;    
+}
+
+#conteudo form{
+    margin-top: 35px;
+    
+}
+
+#conteudo input{
+    width: 450px;
+    height: 35px;
+    padding: 10px;
+    box-sizing: border-box; /*faz com que o padding não aumente o elemento*/
+    /*border: none;*/
+    border: 1px solid #CCCCCC;
+    border-radius: 3px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+#conteudo button{
+    background-color: #003366;
+    color: #ffffff;
+    border: none;
+    padding: 10px 45px; /*vertical (top/bottom) horizontal (left/right)*/
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+/*Estado ao passar o mouse*/
+#conteudo button:hover{
+    background-color: #FF3131;
+}
+
+#resultado h2{
+    margin-bottom: 0;
+    color: #333333;
+}
+
+/*Media Queries*/
+/*se a tela do usuário for de até 1024px*/
+@media (max-width: 1024px){
+
+    #principal{
+        width: 90%;
+        max-width: 600px;
+        height: auto;
+        padding: 20px;
+        justify-content: center;
+    }
+
+    #imagem{
+        /*width: 45%;*/
+        display: none;
+    }
+
+    #conteudo input{
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 600px){
+
+    #principal{
+        width: 70%;
+        border-radius: 10px;
+    }
+    
+}

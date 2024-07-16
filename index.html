@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcule seu IMC</title>
+
+    <!-- Ligação entre HTML e CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <div id="flex-center">
+
+        <div id="principal">
+
+            <div id="imagem">
+                <img src="img/foto.jpg" alt="Fotografia de uma mulher com uma melancia na mão">
+            </div>
+
+            <div id="conteudo">
+                <img src="img/logo.png" alt="Logotipo Você Saudável">
+
+                <h1>Calcule seu <span>IMC</span></h1>
+                <p>Preencha as informações abaixo para calcular </p>
+
+                <!-- https://www.w3schools.com/ -->
+                <form action="#">
+
+                    <label for="peso">Digite seu peso</label><br>
+                    <input type="number" id="peso" placeholder="Ex: 68.5" step="0.01" min="10" max="200"><br>
+
+                    <label for="altura">Digite sua altura</label><br>
+                    <input type="number" id="altura" placeholder="Ex: 1.80" step="0.01"><br>
+                    <!-- <textarea></textarea> -->
+
+                    <button onclick="calcularIMC()">Calcular IMC</button>
+
+                </form>
+
+                <div id="resultado"></div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Ligação do HTML com o JS -->
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
